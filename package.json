@@ -1,0 +1,56 @@
+{
+  "description": "Helper library converting SVG into DbIconDefinition files.",
+  "keywords": [
+    "font",
+    "icon",
+    "svg"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE.txt",
+    "attribution.js"
+  ],
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "homepage": "https://digibear.app",
+  "bugs": {
+    "url": "https://github.com/digibearapp/digibear-svg-icons/issues"
+  },
+  "author": "Téodor Todorov <todorovteodortt@hotmail.com> (https://twitter.com/todorovteodortt)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digibearapp/digibear-svg-icons.git"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "dependencies": {},
+  "version": "1.0.1",
+  "name": "@digibearapp/digibear-svg-icons",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "node attribution.js",
+    "build": "rimraf dist && rollup -c",
+    "generate-icons": "node ./bin/generate-files.js"
+  },
+  "devDependencies": {
+    "@digibearapp/digibear-common-types": "^1.0.1",
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@terascope/fetch-github-release": "^0.8.7",
+    "chalk": "^4.1.2",
+    "cheerio": "^1.0.0-rc.10",
+    "esbuild": "^0.13.10",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.58.3",
+    "rollup-plugin-dts": "^4.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.3.1",
+    "typescript": "^4.4.4"
+  }
+}
