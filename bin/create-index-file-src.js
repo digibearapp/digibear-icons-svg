@@ -26,8 +26,13 @@ function generateIconDefinitionExport(iconName) {
 function generateFileLines(iconDefinitionExports, iconKeys) {
     return `\
 ${constants.HEADER}
+import { DbIconPack } from '@digibearapp/digibear-common-types';
+import { ${iconKeys.map(key => prefixName(key)).join(',\n\t')} } from './icons';
 ${iconDefinitionExports}
-export const allNames = [${iconKeys.map(key => `"${key}"`).join(',\n')}];
+
+export const allIconsMap : DbIconPack = {
+    ${iconKeys.map(key => `${key} : ${prefixName(key)}`).join(',\n\t')}
+};
 `
 }
 

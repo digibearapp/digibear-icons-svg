@@ -27,26 +27,27 @@
     "node": ">=6"
   },
   "dependencies": {},
-  "version": "1.0.1",
+  "version": "1.0.3",
   "name": "@digibearapp/digibear-svg-icons",
   "license": "MIT",
   "scripts": {
     "postinstall": "node attribution.js",
     "build": "rimraf dist && rollup -c",
-    "generate-icons": "node ./bin/generate-files.js"
+    "generate-icons": "node ./bin/generate-files.js",
+    "update-git": "git add . && git commit -m $npm_package_version && git push"
   },
   "devDependencies": {
-    "@digibearapp/digibear-common-types": "^1.0.1",
+    "@digibearapp/digibear-common-types": "^1.0.4",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@rollup/plugin-typescript": "^8.3.0",
     "@terascope/fetch-github-release": "^0.8.7",
     "chalk": "^4.1.2",
     "cheerio": "^1.0.0-rc.10",
-    "esbuild": "^0.13.10",
+    "esbuild": "^0.13.13",
     "rimraf": "^3.0.2",
-    "rollup": "^2.58.3",
-    "rollup-plugin-dts": "^4.0.0",
+    "rollup": "^2.60.0",
+    "rollup-plugin-dts": "^4.0.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.1",
     "rollup-plugin-terser": "^7.0.2",

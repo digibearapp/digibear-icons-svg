@@ -6,28 +6,28 @@ const { icons } = require("./map-svg-content-to-icon");
 const paths = require("./paths.js");
 const { prefixName, capitalizeFirstLetter } = require('./utils.js');
 
-function createTypesSrcFile() {
+function createAllIconsMapFile() {
     const iconDefinitions = [];
     for (let key in icons) {
         const iconName = prefixName(key);
-        const iconDefinition = generateIconDefinitionExport(iconName);
+        const iconDefinition = generateIconImport(iconName);
         iconDefinitions.push(iconDefinition);
         console.log(`${chalk.inverse.green(" DONE ")} Genereated ${iconName}'s definition export`);
     }
-    const iconDefinitionExports = iconDefinitions.join('\n');
-    const fileLines = generateFileLines(iconDefinitionExports, Object.keys(icons));
+    const iconImports = iconDefinitions.join('\n');
+    const fileLines = generateFileLines(iconImports, Object.keys(icons));
     createFile(fileLines);
 }
 
-function generateIconDefinitionExport(iconName) {
-    return `export { ${iconName} } from './icons';`;
+function generateIconImport(iconName) {
+    return `import { ${iconName} } from './icons';`;
 }
 
-function generateFileLines(iconDefinitionExports, iconKeys) {
+function generateFileLines(iconImports, iconKeys) {
     return `\
 ${constants.HEADER}
-${iconDefinitionExports}
-export const allNames = [${iconKeys.map(key => `"${key}"`).join(',\n')}];
+${iconImports}
+export const allIconsMap: [s] = {${iconKeys.map(key => `"{${key}" : ${prefixName(key)}}`).join(',\n')}};
 `
 }
 
@@ -49,4 +49,4 @@ function createFile(fileLines) {
     }
 }
 
-module.exports = { createTypesSrcFile }
+module.exports = { createAllIconsMapFile }
