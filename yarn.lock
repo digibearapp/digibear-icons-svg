@@ -23,10 +23,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@digibearapp/digibear-common-types@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@digibearapp/digibear-common-types/-/digibear-common-types-1.0.4.tgz#e88d0d0a026ab93218bfc8aa15737cc2c85e8782"
-  integrity sha512-EjUwvcDzRXUWQOgQ9+Qk/B2p+3PCScRnucQDwp7NSJhuapY6J9JxRtPErFLKUdNkNYjo95vEijO85AQgGw3Bbg==
+"@digibearapp/digibear-common-types@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@digibearapp/digibear-common-types/-/digibear-common-types-1.0.5.tgz#de0d80dee8b4807a9dc3da3497edb8678ffda0dd"
+  integrity sha512-cyjA5O+B4PiqDg7D65BggEvCOpRlG0j1mKh7Y1MZgvW5hkyk2Q4GrqTeu/+i5/S5sCNRmeYb3GzLe37FP5h/Sw==
 
 "@rollup/plugin-commonjs@^21.0.1":
   version "21.0.1"

@@ -27,7 +27,7 @@
     "node": ">=6"
   },
   "dependencies": {},
-  "version": "1.0.3",
+  "version": "1.0.4",
   "name": "@digibearapp/digibear-svg-icons",
   "license": "MIT",
   "scripts": {
@@ -37,7 +37,7 @@
     "update-git": "git add . && git commit -m $npm_package_version && git push"
   },
   "devDependencies": {
-    "@digibearapp/digibear-common-types": "^1.0.4",
+    "@digibearapp/digibear-common-types": "^1.0.5",
     "@rollup/plugin-commonjs": "^21.0.1",
     "@rollup/plugin-node-resolve": "^13.0.6",
     "@rollup/plugin-typescript": "^8.3.0",
