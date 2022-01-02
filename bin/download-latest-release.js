@@ -1,8 +1,8 @@
-const { downloadRelease } = require('@terascope/fetch-github-release');
+import { downloadRelease } from "@terascope/fetch-github-release";
 
-const USER = 'digibearapp';
-const REPO = 'digibear-icons';
-const OUTPUT_DIR = 'temp';
+const USER = "digibearapp";
+const REPO = "digibear-icons";
+const OUTPUT_DIR = "temp";
 const LEAVE_ZIPPED = false;
 const DISABLE_LOGGING = false;
 
@@ -17,16 +17,22 @@ function filterAsset(asset) {
   return true;
 }
 
-async function downloadDbIconsRelease() {
+export async function downloadDbIconsRelease() {
   return new Promise((resolve, reject) => {
-    downloadRelease(USER, REPO, OUTPUT_DIR, filterRelease, filterAsset, LEAVE_ZIPPED, DISABLE_LOGGING)
+    downloadRelease(
+      USER,
+      REPO,
+      OUTPUT_DIR,
+      filterRelease,
+      filterAsset,
+      LEAVE_ZIPPED,
+      DISABLE_LOGGING
+    )
       .then(function () {
-        resolve('Successfully downloaded latest digibear-icons release.');
+        resolve("Successfully downloaded latest digibear-icons release.");
       })
       .catch(function (err) {
-        reject('Could not download latest digibear-icons release.');
+        reject("Could not download latest digibear-icons release.");
       });
   });
 }
-
-module.exports = { downloadDbIconsRelease };
