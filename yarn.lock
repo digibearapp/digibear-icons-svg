@@ -44,10 +44,10 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@digibearapp/digibear-common-types@^1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@digibearapp/digibear-common-types/-/digibear-common-types-1.0.6.tgz#38f09f23637f523d157414b9f2f1a038d27dd90c"
-  integrity sha512-rWOXc5DrKzMmt9DnbHyf6H5RLyHtwL13plRYSob+59Pj5bJ5pQqhNcyCKH99XHhv6AnxQju6vvIVYMSHHx5F9w==
+"@digibearapp/digibear-common-types@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@digibearapp/digibear-common-types/-/digibear-common-types-1.0.7.tgz#6f1d8e023cef426342024b761dde461e79d17ab6"
+  integrity sha512-2dcq9D1jwupmUH+Nc+jjt0I5OU0K6LwlyKeNvU8zp/4llsKgRN9uSZvuYQISnJcfQWEAwC4Ij8gsbLIiIrK5Tg==
 
 "@rollup/plugin-commonjs@^21.0.1":
   version "21.0.1"

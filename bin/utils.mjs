@@ -1,6 +1,6 @@
 import cheerio from "cheerio";
 import fs from "fs";
-import * as constants from "./constants.js";
+import * as constants from "./constants.mjs";
 
 export function clearAndUpper(text) {
   return text.replace(/-/, "").toUpperCase();

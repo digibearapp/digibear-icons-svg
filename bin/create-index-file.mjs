@@ -1,10 +1,10 @@
 import chalk from "chalk";
 import fs from "fs";
 import path from "path";
-import * as constants from "./constants.js";
-import { icons } from "./map-svg-content-to-icon.js";
-import * as paths from "./paths.js";
-import { prefixName } from "./utils.js";
+import * as constants from "./constants.mjs";
+import { icons } from "./map-svg-content-to-icon.mjs";
+import * as paths from "./paths.mjs";
+import { prefixName } from "./utils.mjs";
 
 export function createTypesFile() {
   const iconDefinitions = [];

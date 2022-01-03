@@ -1,13 +1,13 @@
 import chalk from "chalk";
-import * as paths from "./paths.js";
+import * as paths from "./paths.mjs";
 import fs from "fs";
 import path from "path";
-import { deleteDir, makeDir } from "./clean-up.js";
-import { downloadDbIconsRelease } from "./download-latest-release.js";
-import { createIconFiles } from "./create-icon-files.js";
-import { populateIcons } from "./map-svg-content-to-icon.js";
-import { createTypesFile } from "./create-index-file.js";
-import { createTypesSrcFile } from "./create-index-file-src.js";
+import { deleteDir, makeDir } from "./clean-up.mjs";
+import { downloadDbIconsRelease } from "./download-latest-release.mjs";
+import { createIconFiles } from "./create-icon-files.mjs";
+import { populateIcons } from "./map-svg-content-to-icon.mjs";
+import { createTypesFile } from "./create-index-file.mjs";
+import { createTypesSrcFile } from "./create-index-file-src.mjs";
 
 console.log(`${chalk.inverse.white(" JS ")} generate-type-files.js started.`);
 deleteDir(paths.TEMP_PATH);

@@ -1,8 +1,8 @@
 import chalk from "chalk";
 import fs from "fs";
 import path from "path";
-import * as paths from "./paths.js";
-import { toCamelCase, extractSVGPaths } from "./utils.js";
+import * as paths from "./paths.mjs";
+import { toCamelCase, extractSVGPaths } from "./utils.mjs";
 
 export const icons = {};
 
